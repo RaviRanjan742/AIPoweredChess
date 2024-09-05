@@ -1,4 +1,4 @@
-# AI Powered Chess
+# AICheck
 
 A UCI-compatible chess game built from scratch in Python, with drag-and-drop functionality and the option to play against an AI using the powerful Stockfish chess engine.
 
