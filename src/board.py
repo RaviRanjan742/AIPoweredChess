@@ -118,10 +118,12 @@ class Board:
         for row in range(ROWS):
             for col in range(COLS):
                 if temp_board.squares[row][col].has_enemy_piece(piece.color):
-                    p = temp_board.squares[row][col].piece
-                    temp_board.calc_moves(p, row, col, bool=False)
+                    p = temp_board.squares[row][col].piece                    
+                    if isinstance(p, King):
+                        continue
+                    temp_board.calc_moves(p,row,col,bool=False)
                     for m in p.moves:
-                        if isinstance(m.final.piece, King):
+                        if isinstance(m.final.piece,King):
                             return True
         
         return False
@@ -453,7 +455,7 @@ class Board:
 
         elif isinstance(piece, King): 
             king_moves()
-        def move_puts_king_in_check()
+        
     
 
     def _create(self):
