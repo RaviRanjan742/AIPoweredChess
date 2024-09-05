@@ -27,7 +27,7 @@ We designed the game using object-oriented programming (OOP) principles, organiz
 
 - **Game Class**: Manages the overall game flow and interaction with the AI.
 
-- **Move Class**: Ensures that moves comply with chess rules.
+- **Move Class**: Ensures that the  moves comply with chess rules.
 
 - **Const Class**: Handles the screen resolution and board size settings.
 
