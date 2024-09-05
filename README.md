@@ -7,11 +7,6 @@ We built a chess game that two mode:
 
 
  In this mode,we built a chess game using python with various classes to handle the gameplay.
-
- 
- **Const class**
- This class handles the screen and board dimensions
-
  
  **Main class**
  This class ties different components and handles the overall game flow 
@@ -47,6 +42,12 @@ We built a chess game that two mode:
  
  **Move class**
  This class checks legal moves in chess board 
+
+  
+ **Const class**
+
+ 
+ This class handles the screen and size of the board  
  
  
 
@@ -58,7 +59,7 @@ We built a chess game that two mode:
 ## Challenges we faced 
 
 
-Implementing  OOPs concepts and and integrating very classes and functions
+Implementing  OOPs concepts and and integrating verious classes and functions
 
 ## What we are proud of
 
