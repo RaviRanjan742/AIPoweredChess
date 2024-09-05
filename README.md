@@ -51,4 +51,12 @@ Building this game required careful integration of various classes and functions
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ai-powered-chess.git
+   https://github.com/RaviRanjan742/AIPoweredChess.git
+
+2. Run the game :
+    ```bash
+    python main.py
+
+    
+   
+
