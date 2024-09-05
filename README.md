@@ -1,73 +1,54 @@
-# AI POWERED CHESS
-UCI-compatible chess game built from scratch in Python
-## HOW WE BUILT IT
-We built a chess game that two mode:
+# AI Powered Chess
 
-1.**Play with human**
+A UCI-compatible chess game built from scratch in Python, with drag-and-drop functionality and the option to play against an AI using the powerful Stockfish chess engine.
 
+## Features
 
- In this mode,we built a chess game using python with various classes to handle the gameplay.
- 
- **Main class**
- This class ties different components and handles the overall game flow 
- like interacting with different classes like Board,Piece,Player etc
+- **Two Modes of Play**:
+  - **Play with Human**: Traditional two-player chess, complete with drag-and-drop piece movement and sound effects.
+  - **Play with AI**: Challenge the Stockfish chess engine with adjustable difficulty levels. Test your skills against one of the strongest open-source chess engines.
 
- 
- **Dragger class**
- This class handles the drag-and-drop functionality of chess pieces
+## How We Built It
 
- 
- **Square class**
- This class is responsible for representing an individual square on the chessboard 
+We designed the game using object-oriented programming (OOP) principles, organizing our code into distinct classes to handle different parts of the game:
 
- 
- **Sound class**
- This class handles the sound when we move pieces on the chess board
-
- 
- **Board class**
- This class responsibles for many functions :
-  *Maintain the board structure 
-
-  *Initialize pieces at the start of the game
-
-  *Move and update pieces on the board during gameplay and check legal moves 
-
-  *Handles special chess rules(castling,en passant,pawn promotion)
-
+- **Main Class**: Oversees the entire game flow, managing interactions between other components like the board, pieces, and players.
   
- **Game class**
- This class oversees the overall game flow and interaction with AI
-
- 
- **Move class**
- This class checks legal moves in chess board 
-
+- **Dragger Class**: Manages the drag-and-drop functionality for moving chess pieces.
   
- **Const class**
+- **Square Class**: Represents individual squares on the chessboard.
+  
+- **Sound Class**: Handles sound effects for piece movements.
+  
+- **Board Class**: 
+  - Initializes and maintains the chessboard structure.
+  - Moves and updates pieces during the game.
+  - Enforces special chess rules (castling, en passant, pawn promotion).
 
- 
- This class handles the screen and size of the board  
- 
- 
+- **Game Class**: Manages the overall game flow and interaction with the AI.
 
-2.**Play with AI**
+- **Move Class**: Ensures that moves comply with chess rules.
 
+- **Const Class**: Handles the screen resolution and board size settings.
 
- The AI mode uses the stockfish chess engine where we can set the difficulty level and play with chess engine according to difficulty level
+## Challenges We Faced
 
-## Challenges we faced 
+Building this game required careful integration of various classes and functions using OOP concepts. We also faced challenges in ensuring the game logic conformed to chess rules, especially for special moves like castling and pawn promotion.
 
+## What We’re Proud Of
 
-Implementing  OOPs concepts and and integrating verious classes and functions
+- Our AI-powered chess game has defeated all of our team members and friends!
+  
+- We've built a fully functional chess game that not only allows for human vs. human play but also features a challenging AI opponent.
 
-## What we are proud of
+## Future Work
 
+- We plan to implement neural networks to enable the AI to learn from its own games and improve over time. This would allow our chess engine to train itself based on real-world gameplay data.
+  
+- In the future, we also plan to add a learning mode that helps players analyze all their moves. During gameplay, the system will guide players by explaining why their move is incorrect and what the potential repercussions could be.
 
-My chess game defeats all my team mates and my friends
+## How to Play
 
-## Future work
-We will try to implement neural nets in our chess which would learn the moves the ai then train itself while playing
-
- 
-
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ai-powered-chess.git
