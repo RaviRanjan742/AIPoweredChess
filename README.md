@@ -3,7 +3,9 @@ UCI-compatible chess game built from scratch in Python
 ## HOW WE BUILT IT
 We built a chess game that two mode:
 
-###1.**Play with human**
+1.**Play with human**
+
+
  In this mode,we built a chess game using python with various classes to handle the gameplay.
 
  
@@ -48,13 +50,19 @@ We built a chess game that two mode:
  
  
 
-###2.**Play with AI**
+2.**Play with AI**
+
+
  The AI mode uses the stockfish chess engine where we can set the difficulty level and play with chess engine according to difficulty level
 
 ## Challenges we faced 
+
+
 Implementing  OOPs concepts and and integrating very classes and functions
 
-## What we are proud of 
+## What we are proud of
+
+
 My chess game defeats all my team mates and my friends
 
 ## Future work
