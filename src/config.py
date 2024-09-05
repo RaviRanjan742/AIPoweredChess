@@ -17,6 +17,12 @@ class Config:
         self.capture_sound=Sound(
             os.path.join('assets/sounds/capture.wav')
         )
+
+        self.stockfish_path =r"E:\stockfish\stockfish-windows-x86-64-avx2\stockfish\stockfish-windows-x86-64-avx2.exe"  # Update this with your Stockfish path
+        self.ai_mode = False  # False for PvP, True for PvAI
+        self.ai_difficulty = 10  # Stockfish skill level (0-20)
+        self.ai_depth = 15  # Search depth for Stockfish
+        self.ai_time = 2.0  # Time limit for Stockfish to make a move (in seconds)
     def change_theme(self):
         self.idx +=1
         self.idx %=len(self.themes)
@@ -29,5 +35,26 @@ class Config:
         gray = Theme((120, 119, 118), (86, 85, 84), (99, 126, 143), (82, 102, 128), '#C86464', '#C84646')
 
         self.themes=[green,brown,blue,gray]
+    
+    def toggle_ai_mode(self):
+        self.ai_mode = not self.ai_mode
+
+    def set_ai_difficulty(self, level):
+        if 0 <= level <= 20:
+            self.ai_difficulty = level
+
+    def set_ai_depth(self, depth):
+        if depth > 0:
+            self.ai_depth = depth
+
+    def set_ai_time(self, time):
+        if time > 0:
+            self.ai_time = time
+
+    def set_stockfish_path(self, path):
+        if os.path.exists(path):
+            self.stockfish_path = path
+        else:
+            raise FileNotFoundError(f"Stockfish executable not found at {path}")
 
     

@@ -5,6 +5,7 @@ from move import Move
 from sound import Sound
 import copy
 import os
+import chess
 
 class Board:
 
@@ -14,6 +15,34 @@ class Board:
         self._create()
         self._add_pieces('white')
         self._add_pieces('black')
+    
+    def get_fen(self):
+        fen=[]
+        for row in range(ROWS):
+            empty=0
+            row_fen=''
+            for col in range(COLS):
+                piece=self.squares[row][col].piece
+                if piece is None:
+                    empty+=1
+                else:
+                    if empty>0:
+                        row_fen+=str(empty)
+                        empty=0
+                    row_fen+=piece.fen_symbol()
+            if empty > 0:
+                row_fen +=str(empty)
+            fen.append(row_fen)
+        return '/'.join(fen)
+    
+    def apply_stockfish_move(self, uci_move):
+        from_square = Square.from_uci(uci_move[:2])
+        to_square = Square.from_uci(uci_move[2:4])
+        piece = self.squares[from_square.row][from_square.col].piece
+        move = Move(from_square, to_square)
+        self.move(piece, move)
+        
+            
 
     def move(self, piece, move, testing=False):
         initial = move.initial
@@ -27,10 +56,12 @@ class Board:
 
         if isinstance(piece, Pawn):
             # en passant capture
+            
             diff = final.col - initial.col
-            if diff != 0 and en_passant_empty:
+            if diff != 0:
                 # console board move update
-                self.squares[initial.row][initial.col + diff].piece = None
+                if en_passant_empty:
+                    self.squares[initial.row][initial.col + diff].piece = None
                 self.squares[final.row][final.col].piece = piece
                 if not testing:
                     sound = Sound(
@@ -61,9 +92,9 @@ class Board:
         return move in piece.moves
 
     def check_promotion(self, piece, final):
-        if final.row == 0 or final.row == 7:
-            self.squares[final.row][final.col].piece = Queen(piece.color)
-
+        if isinstance(piece,Pawn):
+            if(piece.color=='white' and final.row == 0) or (piece.color == 'black' and final.row == 7):
+                self.squares[final.row][final.col].piece==Queen(piece.color)
     def castling(self, initial, final):
         return abs(initial.col - final.col) == 2
 
@@ -96,7 +127,9 @@ class Board:
         return False
 
     def calc_moves(self, piece, row, col, bool=True):
-       
+        '''
+            Calculate all the possible (valid) moves of an specific piece on a specific position
+        '''
         
         def pawn_moves():
             # steps
@@ -297,19 +330,17 @@ class Board:
 
                 if Square.in_range(possible_move_row, possible_move_col):
                     if self.squares[possible_move_row][possible_move_col].isempty_or_enemy(piece.color):
+
+                        if not self.move_puts_king_in_check(piece, row, col, possible_move_row, possible_move_col):
                         # create squares of the new move
-                        initial = Square(row, col)
-                        final = Square(possible_move_row, possible_move_col) # piece=piece
+                            initial = Square(row, col)
+                            final = Square(possible_move_row, possible_move_col) # piece=piece
                         # create new move
-                        move = Move(initial, final)
+                            move = Move(initial, final)
                         # check potencial checks
-                        if bool:
-                            if not self.in_check(piece, move):
-                                # append new move
-                                piece.add_move(move)
-                            else: break
-                        else:
-                            # append new move
+                        
+                            
+                            
                             piece.add_move(move)
 
             # castling moves
@@ -422,6 +453,8 @@ class Board:
 
         elif isinstance(piece, King): 
             king_moves()
+        def move_puts_king_in_check()
+    
 
     def _create(self):
         for row in range(ROWS):
