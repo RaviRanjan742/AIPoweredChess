@@ -56,7 +56,3 @@ Building this game required careful integration of various classes and functions
 2. Run the game :
     ```bash
     python main.py
-
-    
-   
-
