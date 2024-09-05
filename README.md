@@ -30,12 +30,29 @@ We built a chess game that two mode:
  
  **Board class**
  This class responsibles for many functions :
-  *Represent the chessboard
+  *Maintain the board structure 
+
+  *Initialize pieces at the start of the game
+
+  *Move and update pieces on the board during gameplay and check legal moves 
+
+  *Handles special chess rules(castling,en passant,pawn promotion)
+
+  
+ **Game class**
+ This class oversees the overall game flow and interaction with AI
+
+ 
+ **Move class**
+ This class checks legal moves in chess board
   
  
  
 
 2.**Play with AI**
- The AI mode uses the stockfish ches
+ The AI mode uses the stockfish chess engine where we can set the difficulty level and play with chess engine according to difficulty level
+
+## Challenges we faced
+
  
 
