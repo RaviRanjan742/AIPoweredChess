@@ -7,11 +7,6 @@ A UCI-compatible chess game built from scratch in Python, featuring drag-and-dro
 
 ---
 
-## 🎥 Demo (YouTube)
-
-[![AICheck Chess Game Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://youtu.be/7lTeOBloHqg))
-
----
 
 ## ✨ Features
 
