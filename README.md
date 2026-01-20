@@ -1,58 +1,90 @@
-# AICheck
+# ♟️ AICheck
 
-A UCI-compatible chess game built from scratch in Python, with drag-and-drop functionality and the option to play against an AI using the powerful Stockfish chess engine.
+A UCI-compatible chess game built from scratch in Python, featuring drag-and-drop gameplay and the option to play against an AI powered by the Stockfish chess engine.
 
-## Features
+🎥 **YouTube Demo:**  
+https://www.youtube.com/watch?v=YOUR_VIDEO_ID
 
-- **Two Modes of Play**:
-  - **Play with Human**: Traditional two-player chess, complete with drag-and-drop piece movement and sound effects.
-  - **Play with AI**: Challenge the Stockfish chess engine with adjustable difficulty levels. Test your skills against one of the strongest open-source chess engines.
+---
 
-## How We Built It
+## 🎥 Demo (YouTube)
 
-We designed the game using object-oriented programming (OOP) principles, organizing our code into distinct classes to handle different parts of the game:
+[![AICheck Chess Game Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://youtu.be/7lTeOBloHqg))
 
-- **Main Class**: Oversees the entire game flow, managing interactions between other components like the board, pieces, and players.
-  
-- **Dragger Class**: Manages the drag-and-drop functionality for moving chess pieces.
-  
-- **Square Class**: Represents individual squares on the chessboard.
-  
-- **Sound Class**: Handles sound effects for piece movements.
-  
-- **Board Class**: 
-  - Initializes and maintains the chessboard structure.
-  - Moves and updates pieces during the game.
-  - Enforces special chess rules (castling, en passant, pawn promotion).
+---
 
-- **Game Class**: Manages the overall game flow and interaction with the AI.
+## ✨ Features
 
-- **Move Class**: Ensures that the  moves comply with chess rules.
+- **Two Modes of Play**
+  - **Play with Human**  
+    Traditional two-player chess with drag-and-drop piece movement and sound effects.
+  - **Play with AI**  
+    Challenge the Stockfish chess engine with adjustable difficulty levels.
 
-- **Const Class**: Handles the screen resolution and board size settings.
+- **UCI-Compatible**
+  - Integrated with Stockfish using the UCI (Universal Chess Interface) protocol.
 
-## Challenges We Faced
+- **Real Chess Rules**
+  - Castling  
+  - En passant  
+  - Pawn promotion  
 
-Building this game required careful integration of various classes and functions using OOP concepts. We also faced challenges in ensuring the game logic conformed to chess rules, especially for special moves like castling and pawn promotion.
+- **Interactive UI**
+  - Drag-and-drop movement
+  - Sound effects for piece actions
 
-## What We’re Proud Of
+---
 
-- Our AI-powered chess game has defeated all of our team members and friends!
-  
-- We've built a fully functional chess game that not only allows for human vs. human play but also features a challenging AI opponent.
+## 🛠️ How We Built It
 
-## Future Work
+The project follows **Object-Oriented Programming (OOP)** principles, with clearly separated responsibilities across classes:
 
-- We plan to implement neural networks to enable the AI to learn from its own games and improve over time. This would allow our chess engine to train itself based on real-world gameplay data.
-  
-- In the future, we also plan to add a learning mode that helps players analyze all their moves. During gameplay, the system will guide players by explaining why their move is incorrect and what the potential repercussions could be.
+- **Main Class**
+  - Controls the overall game loop and event handling.
 
-## How to Play
+- **Game Class**
+  - Manages game state and AI interaction.
 
-1. Clone the repository:
-   ```bash
-   https://github.com/RaviRanjan742/AIPoweredChess.git
+- **Board Class**
+  - Initializes and maintains the chessboard.
+  - Handles piece movement and rule enforcement.
 
-2. Run the game :
-    ```bash
-    python main.py
+- **Square Class**
+  - Represents individual squares on the chessboard.
+
+- **Move Class**
+  - Validates legal chess moves.
+
+- **Dragger Class**
+  - Implements drag-and-drop functionality for chess pieces.
+
+- **Sound Class**
+  - Manages sound effects for gameplay actions.
+
+- **Const Class**
+  - Stores constants such as screen resolution and board dimensions.
+
+---
+
+## 🚧 Challenges We Faced
+
+- Implementing **special chess rules** like castling, en passant, and pawn promotion.
+- Integrating Stockfish smoothly while keeping the UI responsive.
+- Designing a modular OOP architecture for maintainability and scalability.
+
+---
+
+## 🏆 What We’re Proud Of
+
+- The AI-powered chess engine has defeated **all team members and friends**.
+- Successfully built a **fully functional chess game from scratch**.
+- Clean separation of concerns using OOP principles.
+
+---
+
+## 🔮 Future Work
+
+- Integrate **neural networks** so the AI can learn from its own games.
+- Add a **learning mode** that explains:
+  - Why a move is incorrect
+  - The potentia
