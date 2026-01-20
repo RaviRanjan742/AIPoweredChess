@@ -3,7 +3,7 @@
 A UCI-compatible chess game built from scratch in Python, featuring drag-and-drop gameplay and the option to play against an AI powered by the Stockfish chess engine.
 
 🎥 **YouTube Demo:**  
-https://www.youtube.com/watch?v=YOUR_VIDEO_ID
+[https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://youtu.be/7lTeOBloHqg)
 
 ---
 
